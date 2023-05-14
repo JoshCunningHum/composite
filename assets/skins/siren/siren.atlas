@@ -1,0 +1,142 @@
+
+siren.png
+size: 512, 512
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+white-pixel
+  rotate: false
+  xy: 506, 505
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+amgd-hd
+  rotate: false
+  xy: 1, 260
+  size: 498, 95
+  orig: 498, 95
+  offset: 0, 0
+  index: -1
+amgdt
+  rotate: false
+  xy: 1, 237
+  size: 292, 21
+  orig: 292, 21
+  offset: 0, 0
+  index: -1
+isocp3
+  rotate: false
+  xy: 1, 459
+  size: 503, 47
+  orig: 503, 47
+  offset: 0, 0
+  index: -1
+isocp3-hd
+  rotate: false
+  xy: 1, 357
+  size: 501, 100
+  orig: 501, 100
+  offset: 0, 0
+  index: -1
+apiera-icon
+  rotate: false
+  xy: 1, 35
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+apiera-icon-active
+  rotate: false
+  xy: 101, 35
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+builder-down
+  rotate: false
+  xy: 1, 85
+  size: 100, 150
+  split: 20, 20, 50, 22
+  pad: 15, 15, 100, 22
+  orig: 100, 150
+  offset: 0, 0
+  index: -1
+builder-up
+  rotate: false
+  xy: 103, 85
+  size: 100, 150
+  split: 20, 20, 22, 60
+  pad: 15, 15, 61, 62
+  orig: 100, 150
+  offset: 0, 0
+  index: -1
+hexa-icon
+  rotate: false
+  xy: 205, 187
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+hexa-icon-active
+  rotate: false
+  xy: 205, 87
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+penta-icon
+  rotate: false
+  xy: 51, 35
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+penta-icon-active
+  rotate: false
+  xy: 151, 35
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+quadra-icon
+  rotate: false
+  xy: 205, 137
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+quadra-icon-active
+  rotate: false
+  xy: 255, 187
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+dark-white-border
+  rotate: false
+  xy: 35, 1
+  size: 32, 32
+  split: 5, 5, 5, 5
+  pad: 6, 6, 6, 6
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+transparent-white-border
+  rotate: false
+  xy: 1, 1
+  size: 32, 32
+  split: 10, 10, 10, 10
+  pad: 10, 10, 5, 5
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+white
+  rotate: false
+  xy: 255, 153
+  size: 32, 32
+  split: 15, 15, 15, 15
+  pad: 10, 10, 5, 5
+  orig: 32, 32
+  offset: 0, 0
+  index: -1

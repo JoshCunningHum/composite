@@ -1,0 +1,140 @@
+{
+"BitmapFont": {
+	"amgd-hd": {
+		"file": "amgd-hd.fnt",
+		"scaledSize": -1,
+		"markupEnabled": false,
+		"flip": false
+	},
+	"amgdt": {
+		"file": "amgdt.fnt",
+		"scaledSize": -1,
+		"markupEnabled": false,
+		"flip": false
+	},
+	"isocp3": {
+		"file": "isocp3.fnt",
+		"scaledSize": -1,
+		"markupEnabled": false,
+		"flip": false
+	},
+	"isocp3-hd": {
+		"file": "isocp3-hd.fnt",
+		"scaledSize": -1,
+		"markupEnabled": false,
+		"flip": false
+	}
+},
+"Color": {
+	"BLACK": {
+		"hex": "1a1a1aff"
+	},
+	"LIGHT": {
+		"hex": "f0f0f0ff"
+	},
+	"TRANSAPARENT": {
+		"hex": "ffffff00"
+	},
+	"YELLOW": {
+		"hex": "fff000ff"
+	}
+},
+"TintedDrawable": {
+	"TRANSPARENT": {
+		"name": "white-pixel",
+		"color": "TRANSAPARENT"
+	},
+	"LIGHT-BG": {
+		"name": "white-pixel",
+		"color": "LIGHT"
+	},
+	"DEFAULT-BG": {
+		"name": "white-pixel",
+		"color": "BLACK"
+	}
+},
+"ButtonStyle": {
+	"siren": {
+		"up": "transparent-white-border",
+		"down": "white",
+		"over": "transparent-white-border",
+		"focused": "transparent-white-border",
+		"disabled": "transparent-white-border",
+		"checked": "white",
+		"checkedOver": "white",
+		"checkedDown": "white",
+		"checkedFocused": "white"
+	}
+},
+"LabelStyle": {
+	"default": {
+		"font": "amgd-hd",
+		"fontColor": "LIGHT",
+		"background": "TRANSPARENT"
+	},
+	"siren": {
+		"font": "amgd-hd",
+		"fontColor": "LIGHT",
+		"background": "TRANSPARENT"
+	},
+	"description": {
+		"font": "isocp3",
+		"fontColor": "LIGHT",
+		"background": "TRANSPARENT"
+	}
+},
+"TextButtonStyle": {
+	"default": {
+		"font": "amgdt",
+		"fontColor": "LIGHT",
+		"downFontColor": "BLACK",
+		"overFontColor": "LIGHT",
+		"disabledFontColor": "LIGHT",
+		"up": "transparent-white-border",
+		"down": "white",
+		"over": "transparent-white-border",
+		"focused": "transparent-white-border",
+		"disabled": "transparent-white-border"
+	},
+	"siren": {
+		"font": "amgdt",
+		"fontColor": "LIGHT",
+		"downFontColor": "BLACK",
+		"overFontColor": "LIGHT",
+		"focusedFontColor": "LIGHT",
+		"disabledFontColor": "BLACK",
+		"up": "transparent-white-border",
+		"down": "white"
+	},
+	"towerbuilder": {
+		"font": "isocp3",
+		"fontColor": "LIGHT",
+		"downFontColor": "YELLOW",
+		"checkedFontColor": "YELLOW",
+		"checkedDownFontColor": "YELLOW",
+		"up": "builder-up",
+		"down": "builder-down",
+		"checked": "builder-down",
+		"checkedDown": "builder-down"
+	}
+},
+"TextTooltipStyle": {
+	"default": {
+		"label": "default"
+	}
+},
+"WindowStyle": {
+	"default": {
+		"background": "dark-white-border",
+		"titleFont": "isocp3",
+		"titleFontColor": "LIGHT",
+		"stageBackground": "DEFAULT-BG"
+	},
+	"siren": {
+		"background": "dark-white-border",
+		"titleFont": "isocp3",
+		"titleFontColor": "LIGHT",
+		"stageBackground": "TRANSPARENT"
+	}
+}
+}

@@ -1,0 +1,73 @@
+
+siren-hd.png
+size: 1024, 1024
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+sirenhd-amgd
+  rotate: false
+  xy: 1, 401
+  size: 490, 73
+  orig: 490, 73
+  offset: 0, 0
+  index: -1
+sirenhd-amgd-hd
+  rotate: false
+  xy: 1, 636
+  size: 506, 374
+  orig: 506, 374
+  offset: 0, 0
+  index: -1
+sirenhd-isocp3
+  rotate: false
+  xy: 1, 573
+  size: 506, 61
+  orig: 506, 61
+  offset: 0, 0
+  index: -1
+sirenhd-isocp3-hd
+  rotate: false
+  xy: 509, 638
+  size: 500, 372
+  orig: 500, 372
+  offset: 0, 0
+  index: -1
+amgd-hd
+  rotate: false
+  xy: 1, 476
+  size: 498, 95
+  orig: 498, 95
+  offset: 0, 0
+  index: -1
+amgdt
+  rotate: false
+  xy: 509, 615
+  size: 292, 21
+  orig: 292, 21
+  offset: 0, 0
+  index: -1
+transparent-white-border
+  rotate: false
+  xy: 1, 367
+  size: 32, 32
+  split: 10, 10, 10, 10
+  pad: 10, 10, 5, 5
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+white
+  rotate: false
+  xy: 509, 581
+  size: 32, 32
+  split: 15, 15, 15, 15
+  pad: 10, 10, 5, 5
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+white-pixel
+  rotate: false
+  xy: 1011, 1009
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1

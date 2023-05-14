@@ -1,0 +1,112 @@
+{
+"BitmapFont": {
+	"sirenhd-amgd": {
+		"file": "sirenhd-amgd.fnt",
+		"scaledSize": -1,
+		"markupEnabled": false,
+		"flip": false
+	},
+	"sirenhd-amgd-hd": {
+		"file": "sirenhd-amgd-hd.fnt",
+		"scaledSize": -1,
+		"markupEnabled": false,
+		"flip": false
+	},
+	"sirenhd-isocp3": {
+		"file": "sirenhd-isocp3.fnt",
+		"scaledSize": -1,
+		"markupEnabled": false,
+		"flip": false
+	},
+	"sirenhd-isocp3-hd": {
+		"file": "sirenhd-isocp3-hd.fnt",
+		"scaledSize": -1,
+		"markupEnabled": false,
+		"flip": false
+	}
+},
+"Color": {
+	"BLACK": {
+		"hex": "1a1a1aff"
+	},
+	"LIGHT": {
+		"hex": "f0f0f0ff"
+	},
+	"TRANSAPARENT": {
+		"hex": "ffffff00"
+	}
+},
+"TintedDrawable": {
+	"TRANSPARENT": {
+		"name": "white-pixel",
+		"color": "TRANSAPARENT"
+	},
+	"LIGHT-BG": {
+		"name": "white-pixel",
+		"color": "LIGHT"
+	},
+	"DEFAULT-BG": {
+		"name": "white-pixel",
+		"color": "BLACK"
+	}
+},
+"ButtonStyle": {
+	"siren": {
+		"up": "transparent-white-border",
+		"down": "white",
+		"over": "transparent-white-border",
+		"focused": "transparent-white-border",
+		"disabled": "transparent-white-border",
+		"checked": "white",
+		"checkedOver": "white",
+		"checkedDown": "white",
+		"checkedFocused": "white"
+	}
+},
+"LabelStyle": {
+	"default": {
+		"font": "sirenhd-amgd",
+		"fontColor": "LIGHT",
+		"background": "TRANSPARENT"
+	},
+	"siren": {
+		"font": "sirenhd-amgd-hd",
+		"fontColor": "LIGHT",
+		"background": "TRANSPARENT"
+	},
+	"description": {
+		"font": "sirenhd-isocp3",
+		"fontColor": "LIGHT",
+		"background": "TRANSPARENT"
+	}
+},
+"TextButtonStyle": {
+	"default": {
+		"font": "sirenhd-amgd",
+		"fontColor": "LIGHT",
+		"downFontColor": "BLACK",
+		"overFontColor": "LIGHT",
+		"disabledFontColor": "LIGHT",
+		"up": "transparent-white-border",
+		"down": "white",
+		"over": "transparent-white-border",
+		"focused": "transparent-white-border",
+		"disabled": "transparent-white-border"
+	},
+	"siren": {
+		"font": "sirenhd-amgd",
+		"fontColor": "LIGHT",
+		"downFontColor": "BLACK",
+		"overFontColor": "LIGHT",
+		"focusedFontColor": "LIGHT",
+		"disabledFontColor": "BLACK",
+		"up": "transparent-white-border",
+		"down": "white"
+	}
+},
+"TextTooltipStyle": {
+	"default": {
+		"label": "default"
+	}
+}
+}
