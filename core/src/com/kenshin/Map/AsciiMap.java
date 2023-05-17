@@ -100,6 +100,7 @@ public class AsciiMap {
         ArrayList<Block> blocks = new ArrayList<>();
         boolean isPortrait = Util.screenX < Util.screenY;
         float blockSize = (float) (isPortrait ? Util.screenX : Util.screenY) / (isPortrait ? w : h);
+        Block.size = blockSize;
 
         // loop through the string data
         for(int i = 0; i < h; i++){

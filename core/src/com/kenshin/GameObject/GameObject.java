@@ -1,13 +1,14 @@
 package com.kenshin.GameObject;
 
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.math.GridPoint2;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.Group;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 
 public abstract class GameObject extends Group {
     // we might have to add an actor compound to display itself
-    private Actor _draw;
+    private Image _draw;
     boolean isDrawable = false;
 
     public GameObject(){
@@ -20,10 +21,9 @@ public abstract class GameObject extends Group {
         this.addActor(_draw);
     }
 
-    public Actor d(){
+    public Image d(){
         return _draw;
     }
-
 
 
 }

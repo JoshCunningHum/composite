@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class Map extends GameObject {
     MapConfig config;
     AsciiMap _ascii;
-    ArrayList<Block> blocks;
+    public ArrayList<Block> blocks;
 
     public Map(MapConfig c){
         super();

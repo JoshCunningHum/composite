@@ -1,6 +1,5 @@
 package com.kenshin.Menu.Dialogs;
 
-import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.scenes.scene2d.Action;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
@@ -21,7 +20,6 @@ import com.kenshin.Tower.Hexa;
 import com.kenshin.Tower.Penta;
 import com.kenshin.Tower.Quadra;
 import com.kenshin.Tower.Tower;
-import com.kenshin.Util;
 
 
 public class TowerBuilderDialog extends Dialog {
@@ -29,6 +27,7 @@ public class TowerBuilderDialog extends Dialog {
     public static class TowerBuilderButton extends GameObject{
         public TextButton btn;
         public Image icon;
+        public String name;
 
         private String _drawable;
 
@@ -36,8 +35,9 @@ public class TowerBuilderDialog extends Dialog {
 
         private float icon_up, icon_down;
 
-        public TowerBuilderButton(TextButton btn, final String drawable){
+        public void init(TextButton btn, final String drawable, String name){
             this.btn = btn;
+            this.name = name;
             icon = new Image(btn.getSkin().getDrawable(drawable));
             _drawable = drawable;
 
@@ -79,6 +79,14 @@ public class TowerBuilderDialog extends Dialog {
             setSize(btn.getWidth(), btn.getHeight());
         }
 
+        public TowerBuilderButton(TextButton btn, final String drawable){
+            init(btn, drawable, "null");
+        }
+
+        public TowerBuilderButton(TextButton btn, final String drawable, String name){
+            init(btn, drawable, name);
+        }
+
         public void goUp(){
             btn.setChecked(false);
             icon.setDrawable(btn.getSkin().getDrawable(_drawable));
@@ -100,27 +108,27 @@ public class TowerBuilderDialog extends Dialog {
         content.pad(10);
 
         TextButton quadraBtn = new TextButton(Integer.toString((int) Quadra.cost), skin, "towerbuilder");
-        TowerBuilderButton quadra = new TowerBuilderButton(quadraBtn, "quadra-icon");
+        TowerBuilderButton quadra = new TowerBuilderButton(quadraBtn, "quadra-icon", "quadra");
         content.add(quadra).grow().space(spacing);
 
         TextButton apieraBtn = new TextButton(Integer.toString((int) Apiera.cost), skin, "towerbuilder");
-        TowerBuilderButton apiera = new TowerBuilderButton(apieraBtn, "apiera-icon");
+        TowerBuilderButton apiera = new TowerBuilderButton(apieraBtn, "apiera-icon", "apiera");
         content.add(apiera).grow().space(spacing);
 
         content.row();
 
         TextButton hexaBtn = new TextButton(Integer.toString((int) Hexa.cost), skin, "towerbuilder");
-        TowerBuilderButton hexa = new TowerBuilderButton(hexaBtn, "hexa-icon");
+        TowerBuilderButton hexa = new TowerBuilderButton(hexaBtn, "hexa-icon", "hexa");
         content.add(hexa).grow().space(spacing);
 
         TextButton pentaBtn = new TextButton(Integer.toString((int) Penta.cost), skin, "towerbuilder");
-        TowerBuilderButton penta = new TowerBuilderButton(pentaBtn, "penta-icon");
+        TowerBuilderButton penta = new TowerBuilderButton(pentaBtn, "penta-icon", "penta");
         content.add(penta).grow().space(spacing);
 
         contentChildren = content.getChildren();
 
-        button("CANCEL");
-        button("BUILD");
+        button("CANCEL", "cancel");
+        button("BUILD", "build");
 
         setMovable(false);
         pack();
@@ -135,6 +143,8 @@ public class TowerBuilderDialog extends Dialog {
     protected void result(Object object) {
         super.result(object);
 
+        if(object.equals("cancel")) return;
+
         TowerBuilderButton chosen = null;
         for(Actor a : contentChildren){
             if(!(a instanceof TowerBuilderButton)) continue;
@@ -145,8 +155,26 @@ public class TowerBuilderDialog extends Dialog {
 
         if(chosen == null) return;
 
+        Tower t = null;
+
+        switch (chosen.name){
+            case "quadra":
+                t = new Quadra();
+                break;
+            case "apiera":
+                t = new Apiera();
+                break;
+            case "hexa":
+                t = new Hexa();
+                break;
+            case "penta":
+                t = new Penta();
+                break;
+        }
+
         GameMenu menu = (GameMenu) getStage();
 
-
+        menu.addTower(t);
+        menu.setSelectedSite(null);
     }
 }
