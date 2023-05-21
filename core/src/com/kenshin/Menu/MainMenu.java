@@ -5,6 +5,7 @@ import static com.badlogic.gdx.scenes.scene2d.Touchable.disabled;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
+import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.kenshin.Game;
@@ -27,6 +28,8 @@ public class MainMenu extends Menu{
 
         SceneComposerStageBuilder builder = new SceneComposerStageBuilder();
         builder.build(this, skin, Gdx.files.internal("ui/" + (isHD ? "mainMenuHD" : "mainMenu") + ".json"));
+
+        ((Table) getRoot().getChild(0)).defaults().prefHeight(Util.UI.PREF.buttonHeight());
 
         TextButton play = getRoot().findActor("playBtn");
         play.addListener(new ClickListener(){

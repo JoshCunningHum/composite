@@ -29,6 +29,9 @@
 	"BLACK": {
 		"hex": "1a1a1aff"
 	},
+	"DANGER-DARK": {
+		"hex": "b21f2dff"
+	},
 	"LIGHT": {
 		"hex": "f0f0f0ff"
 	},
@@ -116,6 +119,42 @@
 		"down": "builder-down",
 		"checked": "builder-down",
 		"checkedDown": "builder-down"
+	},
+	"towerbuilder-cancel": {
+		"font": "amgdt",
+		"fontColor": "LIGHT",
+		"downFontColor": "LIGHT",
+		"up": "builder-cancel-bg-up",
+		"down": "builder-cancel-bg-down"
+	},
+	"towerbuilder-build": {
+		"font": "amgdt",
+		"fontColor": "LIGHT",
+		"downFontColor": "LIGHT",
+		"up": "builder-build-bg-up",
+		"down": "builder-build-bg-down"
+	},
+	"towerbuilder-red": {
+		"font": "isocp3",
+		"fontColor": "LIGHT",
+		"downFontColor": "LIGHT",
+		"checkedFontColor": "LIGHT",
+		"checkedDownFontColor": "LIGHT",
+		"up": "builder-red-up",
+		"down": "builder-red-down",
+		"checked": "builder-red-down",
+		"checkedDown": "builder-red-down"
+	},
+	"towerbuilder-green": {
+		"font": "isocp3",
+		"fontColor": "LIGHT",
+		"downFontColor": "LIGHT",
+		"checkedFontColor": "LIGHT",
+		"checkedDownFontColor": "LIGHT",
+		"up": "builder-green-up",
+		"down": "builder-green-down",
+		"checked": "builder-green-down",
+		"checkedDown": "builder-green-down"
 	}
 },
 "TextTooltipStyle": {
@@ -132,6 +171,18 @@
 	},
 	"siren": {
 		"background": "dark-white-border",
+		"titleFont": "isocp3",
+		"titleFontColor": "LIGHT",
+		"stageBackground": "TRANSPARENT"
+	},
+	"towerbuilder": {
+		"background": "builder-down",
+		"titleFont": "isocp3",
+		"titleFontColor": "LIGHT",
+		"stageBackground": "TRANSPARENT"
+	},
+	"towerbuilder-t1": {
+		"background": "window_a",
 		"titleFont": "isocp3",
 		"titleFontColor": "LIGHT",
 		"stageBackground": "TRANSPARENT"

@@ -1,6 +1,8 @@
 package com.kenshin.Menu;
 import com.badlogic.gdx.scenes.scene2d.Action;
 import com.badlogic.gdx.scenes.scene2d.Group;
+import com.badlogic.gdx.scenes.scene2d.InputEvent;
+import com.badlogic.gdx.scenes.scene2d.InputListener;
 import com.badlogic.gdx.scenes.scene2d.ui.Dialog;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.scenes.scene2d.ui.Label;
@@ -12,9 +14,12 @@ import com.kenshin.Map.Block;
 import com.kenshin.Map.Map;
 import com.kenshin.Map.Site;
 import com.kenshin.Menu.Dialogs.TowerBuilderDialog;
+import com.kenshin.Menu.Dialogs.TowerManagerDialog;
 import com.kenshin.Menu.UI.LabelIcon;
 import com.kenshin.Tower.Tower;
 import com.kenshin.Util;
+
+import java.awt.Rectangle;
 
 
 public class GameMenu extends Menu {
@@ -73,6 +78,8 @@ public class GameMenu extends Menu {
 
         // Initialize Dialogs
         dTowerBuilder = new TowerBuilderDialog(siren);
+        dTowerManager = new TowerManagerDialog(siren);
+
     }
 
     @Override
@@ -89,26 +96,44 @@ public class GameMenu extends Menu {
         d.show(this);
     }
 
+    public void clearSelected(){
+
+        for(Block b : map.blocks){
+            if(!(b instanceof Site)) continue;
+            b.d().setDrawable(Util.Theme.Siren().getDrawable("site"));
+        }
+
+    }
+
     public void setSelectedSite(Site selectedSite) {
 
         this.selectedSite = selectedSite;
-
-        // TODO: Set the selected to a different texture
-        if(true) return;
-
-        for(Block b : map.blocks){
-            b.d().setDrawable((Drawable) Site.texture);
-        }
-
-
+        clearSelected();
         if(selectedSite == null) return;
 
-        selectedSite.d().setDrawable((Drawable) Site.selected);
+        selectedSite.d().setDrawable(Util.Theme.Siren().getDrawable("site-selected"));
     }
 
-    public void showDialogs(Dialog d, Action a){
+    InputListener closeOnClickOutside;
+
+    public void _removeTempListeners(){
+        if(closeOnClickOutside != null) this.removeListener(closeOnClickOutside);
+    }
+
+    public void showDialogs(final Dialog d, Action a){
         d.show(this);
         this.addAction(a);
+
+        System.out.println(d.getX() + " " + d.getY() + " " + d.getWidth() + " " + d.getHeight());
+        closeOnClickOutside = new InputListener(){
+            @Override
+            public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
+                if(!(new Rectangle((int) d.getX(), (int) d.getY(), (int) d.getWidth(), (int) d.getHeight())).contains(x, y)) d.hide();
+                return true;
+            }
+        };
+
+        this.addListener(closeOnClickOutside);
     }
 
     public void addTower(Tower t){

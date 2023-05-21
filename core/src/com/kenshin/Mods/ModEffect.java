@@ -1,4 +1,4 @@
-package com.kenshin.Mod;
+package com.kenshin.Mods;
 
 public class ModEffect implements Runnable{
     String name;

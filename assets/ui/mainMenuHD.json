@@ -2,6 +2,7 @@
 "children": [
 	{
 		"class": "Table",
+		"name": "main_menu",
 		"cells": [
 			{
 				"child": {

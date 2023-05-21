@@ -7,6 +7,7 @@ import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.Touchable;
 import com.badlogic.gdx.scenes.scene2d.ui.Dialog;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
+import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
@@ -20,6 +21,9 @@ import com.kenshin.Tower.Hexa;
 import com.kenshin.Tower.Penta;
 import com.kenshin.Tower.Quadra;
 import com.kenshin.Tower.Tower;
+import com.kenshin.Util;
+
+import org.w3c.dom.Text;
 
 
 public class TowerBuilderDialog extends Dialog {
@@ -31,7 +35,7 @@ public class TowerBuilderDialog extends Dialog {
 
         private String _drawable;
 
-        final float icon_pad_top = 30, icon_size = 30, updown_diff = 38;
+        static final float icon_pad_top = 30, icon_size = 30, updown_diff = 38;
 
         private float icon_up, icon_down;
 
@@ -54,10 +58,10 @@ public class TowerBuilderDialog extends Dialog {
             addListener(new ClickListener(){
                 @Override
                 public void clicked(InputEvent event, float x, float y) {
+
                     TextButton btn = TowerBuilderButton.this.btn;
                     Image icon = TowerBuilderButton.this.icon;
                     boolean isChecked = btn.isChecked();
-
 
                     // get all other text buttons
                     SnapshotArray<Actor> others = getParent().getChildren();
@@ -66,6 +70,9 @@ public class TowerBuilderDialog extends Dialog {
                         TowerBuilderButton tbb = (TowerBuilderButton) a;
                         tbb.goUp();
                     }
+
+                    float icon_up = btn.getHeight() - TowerBuilderButton.icon_pad_top;
+                    float icon_down = icon_up - TowerBuilderButton.updown_diff;
 
                     icon.setY(isChecked ? icon_up : icon_down, Align.center);
                     icon.setDrawable(btn.getSkin().getDrawable(isChecked ? drawable : drawable +"-active"));
@@ -96,16 +103,16 @@ public class TowerBuilderDialog extends Dialog {
 
     SnapshotArray<Actor> contentChildren;
     public TowerBuilderDialog(Skin skin){
-        super("", skin, "siren");
+        super("", skin, "towerbuilder");
         // padTop(Util.isHD() ? 41 : 32);
+        pad(0);
 
-        pad(10);
-
+//        setDebug(true);
         float spacing = 10;
 
         // Add Contents and Buttons
         Table content = getContentTable();
-        content.pad(10);
+        content.pad(15);
 
         TextButton quadraBtn = new TextButton(Integer.toString((int) Quadra.cost), skin, "towerbuilder");
         TowerBuilderButton quadra = new TowerBuilderButton(quadraBtn, "quadra-icon", "quadra");
@@ -127,8 +134,14 @@ public class TowerBuilderDialog extends Dialog {
 
         contentChildren = content.getChildren();
 
-        button("CANCEL", "cancel");
-        button("BUILD", "build");
+        Table buttonTable = getButtonTable();
+        buttonTable.reset();
+        buttonTable.defaults().grow().uniform().prefHeight(Util.UI.PREF.buttonHeight());
+
+        buttonTable.row();
+        button(new TextButton("CANCEL", skin, "towerbuilder-cancel"), "cancel");
+        button(new TextButton("BUILD", skin, "towerbuilder-build"), "build");
+
 
         setMovable(false);
         pack();
@@ -143,7 +156,7 @@ public class TowerBuilderDialog extends Dialog {
     protected void result(Object object) {
         super.result(object);
 
-        if(object.equals("cancel")) return;
+        GameMenu menu = (GameMenu) getStage();
 
         TowerBuilderButton chosen = null;
         for(Actor a : contentChildren){
@@ -153,7 +166,12 @@ public class TowerBuilderDialog extends Dialog {
             tbb.goUp();
         }
 
-        if(chosen == null) return;
+        menu._removeTempListeners();
+
+        if(object.equals("cancel") || chosen == null){
+            menu.setSelectedSite(null);
+            return;
+        }
 
         Tower t = null;
 
@@ -172,7 +190,6 @@ public class TowerBuilderDialog extends Dialog {
                 break;
         }
 
-        GameMenu menu = (GameMenu) getStage();
 
         menu.addTower(t);
         menu.setSelectedSite(null);

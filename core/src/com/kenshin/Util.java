@@ -5,6 +5,9 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.badlogic.gdx.utils.viewport.Viewport;
 
+import java.nio.charset.Charset;
+import java.util.Random;
+
 public class Util {
     static public int screenX = 0, screenY = 0;
     static public Viewport default_screen;
@@ -27,6 +30,12 @@ public class Util {
             System.err.print(e.getMessage());
         }
         return false;
+    }
+
+    static public String genString(int length){
+        byte[] arr = new byte[length];
+        new Random().nextBytes(arr);
+        return new String(arr, Charset.forName("UTF-8"));
     }
 
     static public boolean isInBound(int min, int max, int value) {
@@ -53,7 +62,7 @@ public class Util {
         public static Skin Siren, SirenHD;
 
         public static Skin Siren(){
-            return _isHD ? SirenHD : Siren;
+            return _isHD ? Siren : Siren;
         }
     }
 
@@ -61,6 +70,12 @@ public class Util {
         static public class Textures {
             static public Texture ico_heart = new Texture(Gdx.files.internal("ui/heart.png")),
                                   ico_gold = new Texture(Gdx.files.internal("ui/gold.png"));
+        }
+
+        static public class PREF {
+            static public float buttonHeight(){
+                return ((float) screenY) / 16;
+            }
         }
     }
 

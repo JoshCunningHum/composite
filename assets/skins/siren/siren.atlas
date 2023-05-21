@@ -1,70 +1,177 @@
 
 siren.png
-size: 512, 512
+size: 2048, 2048
 format: RGBA8888
 filter: Linear, Linear
 repeat: none
 white-pixel
   rotate: false
-  xy: 506, 505
+  xy: 800, 2046
   size: 1, 1
   orig: 1, 1
   offset: 0, 0
   index: -1
+base
+  rotate: false
+  xy: 463, 293
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+path
+  rotate: false
+  xy: 67, 35
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+site
+  rotate: false
+  xy: 463, 227
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+site-selected
+  rotate: false
+  xy: 133, 35
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+spawner
+  rotate: false
+  xy: 1, 35
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
 amgd-hd
   rotate: false
-  xy: 1, 260
+  xy: 1, 1801
   size: 498, 95
   orig: 498, 95
   offset: 0, 0
   index: -1
 amgdt
   rotate: false
-  xy: 1, 237
+  xy: 506, 2026
   size: 292, 21
   orig: 292, 21
   offset: 0, 0
   index: -1
 isocp3
   rotate: false
-  xy: 1, 459
+  xy: 1, 2000
   size: 503, 47
   orig: 503, 47
   offset: 0, 0
   index: -1
 isocp3-hd
   rotate: false
-  xy: 1, 357
+  xy: 1, 1898
   size: 501, 100
   orig: 501, 100
   offset: 0, 0
   index: -1
 apiera-icon
   rotate: false
-  xy: 1, 35
-  size: 48, 48
-  orig: 48, 48
+  xy: 1, 1543
+  size: 256, 256
+  orig: 256, 256
   offset: 0, 0
   index: -1
 apiera-icon-active
   rotate: false
-  xy: 101, 35
-  size: 48, 48
-  orig: 48, 48
+  xy: 1, 511
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+builder-build-bg-down
+  rotate: false
+  xy: 564, 1986
+  size: 56, 38
+  split: 15, 20, 15, 20
+  pad: 10, 20, 10, 10
+  orig: 56, 38
+  offset: 0, 0
+  index: -1
+builder-build-bg-up
+  rotate: false
+  xy: 506, 1986
+  size: 56, 38
+  split: 15, 20, 15, 20
+  pad: 10, 20, 10, 10
+  orig: 56, 38
+  offset: 0, 0
+  index: -1
+builder-cancel-bg-down
+  rotate: false
+  xy: 1, 6
+  size: 56, 27
+  split: 19, 9, 6, 17
+  pad: 21, 8, 8, 8
+  orig: 56, 27
+  offset: 0, 0
+  index: -1
+builder-cancel-bg-up
+  rotate: false
+  xy: 622, 1986
+  size: 56, 38
+  split: 18, 15, 15, 18
+  pad: 20, 10, 10, 10
+  orig: 56, 38
   offset: 0, 0
   index: -1
 builder-down
   rotate: false
-  xy: 1, 85
+  xy: 1, 101
   size: 100, 150
   split: 20, 20, 50, 22
   pad: 15, 15, 100, 22
   orig: 100, 150
   offset: 0, 0
   index: -1
+builder-green-down
+  rotate: false
+  xy: 103, 101
+  size: 100, 150
+  split: 26, 26, 55, 20
+  pad: 15, 15, 100, 20
+  orig: 100, 150
+  offset: 0, 0
+  index: -1
+builder-green-up
+  rotate: false
+  xy: 361, 207
+  size: 100, 150
+  split: 26, 26, 17, 58
+  pad: 15, 15, 62, 58
+  orig: 100, 150
+  offset: 0, 0
+  index: -1
+builder-red-down
+  rotate: false
+  xy: 361, 359
+  size: 100, 150
+  split: 26, 26, 55, 20
+  pad: 15, 15, 100, 20
+  orig: 100, 150
+  offset: 0, 0
+  index: -1
+builder-red-up
+  rotate: false
+  xy: 259, 207
+  size: 100, 150
+  split: 26, 26, 17, 58
+  pad: 15, 15, 62, 58
+  orig: 100, 150
+  offset: 0, 0
+  index: -1
 builder-up
   rotate: false
-  xy: 103, 85
+  xy: 259, 359
   size: 100, 150
   split: 20, 20, 22, 60
   pad: 15, 15, 61, 62
@@ -73,58 +180,109 @@ builder-up
   index: -1
 hexa-icon
   rotate: false
-  xy: 205, 187
-  size: 48, 48
-  orig: 48, 48
+  xy: 1, 1285
+  size: 256, 256
+  orig: 256, 256
   offset: 0, 0
   index: -1
 hexa-icon-active
   rotate: false
-  xy: 205, 87
-  size: 48, 48
-  orig: 48, 48
+  xy: 1, 253
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+mod_icon
+  rotate: false
+  xy: 259, 511
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+mod_icon-active
+  rotate: false
+  xy: 259, 511
+  size: 256, 256
+  orig: 256, 256
   offset: 0, 0
   index: -1
 penta-icon
   rotate: false
-  xy: 51, 35
-  size: 48, 48
-  orig: 48, 48
+  xy: 1, 1027
+  size: 256, 256
+  orig: 256, 256
   offset: 0, 0
   index: -1
 penta-icon-active
   rotate: false
-  xy: 151, 35
-  size: 48, 48
-  orig: 48, 48
+  xy: 259, 1543
+  size: 256, 256
+  orig: 256, 256
   offset: 0, 0
   index: -1
 quadra-icon
   rotate: false
-  xy: 205, 137
-  size: 48, 48
-  orig: 48, 48
+  xy: 1, 769
+  size: 256, 256
+  orig: 256, 256
   offset: 0, 0
   index: -1
 quadra-icon-active
   rotate: false
-  xy: 255, 187
-  size: 48, 48
-  orig: 48, 48
+  xy: 259, 1285
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+sell_icon
+  rotate: false
+  xy: 259, 1027
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+sell_icon-active
+  rotate: false
+  xy: 259, 1027
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+upg_icon
+  rotate: false
+  xy: 259, 769
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+upg_icon-active
+  rotate: false
+  xy: 259, 769
+  size: 256, 256
+  orig: 256, 256
   offset: 0, 0
   index: -1
 dark-white-border
   rotate: false
-  xy: 35, 1
+  xy: 127, 1
   size: 32, 32
   split: 5, 5, 5, 5
   pad: 6, 6, 6, 6
   orig: 32, 32
   offset: 0, 0
   index: -1
+window_a
+  rotate: false
+  xy: 463, 359
+  size: 100, 150
+  split: 40, 40, 61, 20
+  pad: 20, 20, 62, 22
+  orig: 100, 150
+  offset: 0, 0
+  index: -1
 transparent-white-border
   rotate: false
-  xy: 1, 1
+  xy: 59, 1
   size: 32, 32
   split: 10, 10, 10, 10
   pad: 10, 10, 5, 5
@@ -133,7 +291,7 @@ transparent-white-border
   index: -1
 white
   rotate: false
-  xy: 255, 153
+  xy: 93, 1
   size: 32, 32
   split: 15, 15, 15, 15
   pad: 10, 10, 5, 5

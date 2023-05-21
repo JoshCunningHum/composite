@@ -1,14 +1,14 @@
 package com.kenshin.Tower;
 
-import com.kenshin.Mod.ModEffect;
+import com.kenshin.Mods.ModEffect;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 
 public class TowerStat {
     // Stats are hashmaps
-    final private HashMap<String, Double> _final = new HashMap<>();
-    final private HashMap<String, Double> _base = new HashMap<>();
+    final private HashMap<String, Float> _final = new HashMap<>();
+    final private HashMap<String, Float> _base = new HashMap<>();
     final private ArrayList<ModEffect> _effects = new ArrayList<>();
 
     TowerStat(TowerStat other){
@@ -20,11 +20,11 @@ public class TowerStat {
         builder.stat.putAll(_base);
     }
 
-    public double get(String stat){
+    public float get(String stat){
         return _final.get(stat);
     }
 
-    public TowerStat set(String stat, double value){
+    public TowerStat set(String stat, float value){
         _final.put(stat, value);
         return this;
     }
